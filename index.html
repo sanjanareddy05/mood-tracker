@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moodie - Mood Tracker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Moodie</h1>
+    <p>Your daily dose of feelings ✨</p>
+  </header>
+
+  <main>
+    <section id="log-mood">
+      <label for="mood">Select Mood:</label>
+      <select id="mood">
+        <option value="">--Choose Mood--</option>
+        <option value="Happy">😊 Happy</option>
+        <option value="Sad">😔 Sad</option>
+        <option value="Angry">😡 Angry</option>
+        <option value="Excited">😆 Excited</option>
+        <option value="Relaxed">😌 Relaxed</option>
+      </select>
+
+      <label for="note">Note (Optional):</label>
+      <textarea id="note" placeholder="Add a note about your mood..."></textarea>
+
+      <button onclick="logMood()">Log Mood</button>
+    </section>
+
+    <section id="visualizations">
+      <h2>Mood Trends</h2>
+      <canvas id="moodChart"></canvas>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
